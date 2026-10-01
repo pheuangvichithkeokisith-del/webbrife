@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebBrief Lao - ແບບຟອມເກັບກຳຄວາມຕ້ອງການສ້າງເວັບໄຊ</title>
+  <meta name="description" content="ລະບົບເກັບກຳຂໍ້ມູນ ຄວາມຕ້ອງການ ແລະ ສະໄຕລ໌ການສ້າງເວັບໄຊຂອງລູກຄ້າ ເພື່ອການອອກແບບແລະພັດທະນາຕາມມາດຕະຖານສາກົນ">
+  <meta property="og:title" content="WebBrief Lao - ແບບຟອມເກັບກຳຄວາມຕ້ອງການສ້າງເວັບໄຊ">
+  <meta property="og:description" content="ລະບົບເກັບກຳຂໍ້ມູນ ຄວາມຕ້ອງການ ແລະ ສະໄຕລ໌ການສ້າງເວັບໄຊຂອງລູກຄ້າ">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Noto Sans Lao & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ==========================================================
+       EMBEDDED CSS - ພາສາເວັບພື້ນຖານ CSS3 ຢູ່ໃນໄຟລ໌ HTML ດຽວ
+       ========================================================== -->
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --success: #059669;
+      --success-dark: #047857;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-focus: #3b82f6;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans Lao', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Sticky Header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-title span {
+      color: var(--accent);
+    }
+
+    .brand-tag {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-left: 6px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      background: white;
+    }
+
+    .btn-sm {
+      padding: 6px 10px;
+      font-size: 11px;
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #334155;
+      border-color: #e2e8f0;
+    }
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    .btn-outline {
+      background: white;
+      color: #334155;
+      border-color: var(--border);
+    }
+    .btn-outline:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-whatsapp {
+      background: var(--success);
+      color: white;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
+    }
+    .btn-whatsapp:hover {
+      background: var(--success-dark);
+    }
+
+    /* Main Container */
+    main {
+      max-width: 900px;
+      margin: 20px auto 60px;
+      padding: 0 16px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 22px 24px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #bfdbfe;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .hero-banner h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .hero-banner p {
+      font-size: 12px;
+      color: #cbd5e1;
+      max-width: 650px;
+      line-height: 1.6;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .tag-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #eff6ff;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Grids & Inputs */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 640px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #334155;
+    }
+
+    .req {
+      color: var(--danger);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #fafafa;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--border-focus);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* Website Type Grid */
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 10px;
+    }
+
+    .type-card {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: left;
+    }
+
+    .type-card:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .type-card.selected {
+      border-color: var(--accent);
+      background: #eff6ff;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .type-icon {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .type-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .type-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* Checkboxes list */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 8px;
+    }
+
+    .check-card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      background: white;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.15s;
+    }
+
+    .check-card:hover {
+      background: #f8fafc;
+    }
+
+    .check-card input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* Visual Design Styles Cards */
+    .style-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .style-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: white;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .style-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .style-card.selected {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .style-preview-box {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .style-card-body {
+      padding: 10px;
+    }
+
+    .style-card-body h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .style-card-body p {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* Color Palettes */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 8px;
+    }
+
+    .palette-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+    }
+
+    .palette-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .palette-card.selected {
+      border-color: var(--accent);
+      background: #eff6ff;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .palette-name {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .palette-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom Page Chips */
+    .custom-pages-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .page-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eff6ff;
+      color: #1e40af;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .page-chip-remove {
+      cursor: pointer;
+      color: #3b82f6;
+      font-weight: bold;
+    }
+    .page-chip-remove:hover {
+      color: var(--danger);
+    }
+
+    /* Action bar */
+    .action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Print styles */
+    @media print {
+      header, .action-bar, .hero-tags, .header-actions, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================
+       HEADER NAVBAR
+       ========================================================== -->
+  <header class="no-print">
+    <div class="header-inner">
+      <div class="brand-wrap">
+        <div class="logo-badge">WB</div>
+        <div>
+          <div class="brand-title">WebBrief<span>.la</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       MAIN CONTENT CONTAINER
+       ========================================================== -->
+  <main>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <h1>ແບບຟອມເກັບກຳຂໍ້ມູນສ້າງເວັບໄຊ (Website Discovery Brief)</h1>
+      <p>ລະບົບເກັບກຳຂໍ້ມູນ, ສະໄຕລ໌ດີໄຊນ໌ ແລະ ຟັງຊັນເວັບໄຊ ເພື່ອການອອກແບບ ແລະ ພັດທະນາຢ່າງມີປະສິດທິພາບ</p>
+    </div>
+
+    <!-- MAIN FORM -->
+    <form id="intakeForm" onsubmit="handleFormSubmit(event)">
+
+      <!-- SECTION 1: Business & Contact -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">1</span>
+            <span>ຂໍ້ມູນທຸລະກິດ ແລະ ຜູ້ຕິດຕໍ່ (Business & Contact Info)</span>
+          </div>
+          <span class="card-hint">ກະລຸນາຕື່ມຂໍ້ມູນຕິດຕໍ່</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label>ຊື່ບໍລິສັດ / ຮ້ານ / ແບຣນ <span class="req">*</span></label>
+            <input type="text" id="companyName" required placeholder="ຕົວຢ່າງ: Lanexang Natural Herbal Tea">
+          </div>
+          <div class="form-group">
+            <label>ຊື່ຜູ້ຕິດຕໍ່ / ຕຳແໜ່ງ <span class="req">*</span></label>
+            <input type="text" id="clientName" required placeholder="ຕົວຢ່າງ: ທ້າວ ສົມສັກ ວົງສາ (ຜູ້ຈັດການ)">
+          </div>
+          <div class="form-group">
+            <label>ເບີໂທລະສັບຕິດຕໍ່ <span class="req">*</span></label>
+            <input type="tel" id="phone" required placeholder="020 5555 xxxx">
+          </div>
+          <div class="form-group">
+            <label>WhatsApp / LINE ID</label>
+            <input type="text" id="whatsappOrLine" placeholder="+856 20 5555 xxxx ຫຼື Line ID">
+          </div>
+          <div class="form-group">
+            <label>ອີເມວ (Email Address)</label>
+            <input type="email" id="email" placeholder="contact@example.la">
+          </div>
+          <div class="form-group">
+            <label>ໝວດໝູ່ທຸລະກິດ (Business Category)</label>
+            <input type="text" id="businessCategory" placeholder="ຕົວຢ່າງ: ຊາສະໝຸນໄພອິນຊີ, ຮ້ານອາຫານ, ໂຮງແຮມ, ການຄ້າ...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ລາຍລະອຽດທຸລະກິດໂດຍຫຍໍ້ (Business Description)</label>
+          <textarea id="businessDescription" rows="2" placeholder="ອະທິບາຍກ່ຽວກັບຜະລິດຕະພັນ, ບໍລິການ ແລະ ຈຸດເດັ່ນຂອງທຸລະກິດ..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>ກຸ່ມລູກຄ້າເປົ້າໝາຍ (Target Audience)</label>
+          <input type="text" id="targetAudience" placeholder="ຕົວຢ່າງ: ລູກຄ້າຮັກສຸຂະພາບ, ນັກທ່ອງທ່ຽວ, ຕົວແທນຈຳໜ່າຍສິນຄ້າ">
+        </div>
+      </div>
+
+      <!-- SECTION 2: Website Type -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">2</span>
+            <span>ປະເພດເວັບໄຊ (Website Type)</span>
+          </div>
+          <span class="card-hint">ຄລິກເລືອກປະເພດທີ່ກົງກັບວຽກ</span>
+        </div>
+
+        <div class="type-grid" id="typeGrid">
+          <div class="type-card selected" onclick="selectType(this, 'corporate')">
+            <div class="type-icon">🏢</div>
+            <div class="type-name">Corporate & Business</div>
+            <div class="type-desc">ບໍລິສັດ, ອົງກອນ, ໂຊບໍລິການ, ສ້າງຄວາມໜ້າເຊື່ອຖື</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'ecommerce')">
+            <div class="type-icon">🛍️</div>
+            <div class="type-name">E-Commerce Store</div>
+            <div class="type-desc">ຂາຍສິນຄ້າອອນລາຍ, ກະຕ່າຊື້ເຄື່ອງ, ຈ່າຍ BCEL One QR</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'hospitality')">
+            <div class="type-icon">🏨</div>
+            <div class="type-name">Hospitality & Resort</div>
+            <div class="type-desc">ໂຮງແຮມ, ຣີສອດ, ໂຊຫ້ອງພັກ, ລະບົບກວດສອບວັນຫວ່າງ</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'restaurant')">
+            <div class="type-icon">🍽️</div>
+            <div class="type-name">Restaurant & Cafe</div>
+            <div class="type-desc">ຮ້ານອາຫານ, ເມນູດິຈິຕອນ, ຈອງໂຕະ, ແຜນທີ່ຮ້ານ</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'portfolio')">
+            <div class="type-icon">✨</div>
+            <div class="type-name">Portfolio & Creative</div>
+            <div class="type-desc">ພອດໂຟລິໂອ, ເອເຈນຊີ, ໂຊຜົນງານດີໄຊນ໌, ຟອມຮັບວຽກ</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'education')">
+            <div class="type-icon">🎓</div>
+            <div class="type-name">Education & Academy</div>
+            <div class="type-desc">ສະຖາບັນ, ໂຮງຮຽນ, ຫຼັກສູດ, ລົງທະບຽນຮຽນອອນລາຍ</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'real_estate')">
+            <div class="type-icon">🏡</div>
+            <div class="type-name">Real Estate & Property</div>
+            <div class="type-desc">ອະສັງຫາ, ລາຍການບ້ານ/ທີ່ດິນ, ນັດໝາຍເບິ່ງສະຖານທີ່</div>
+          </div>
+          <div class="type-card" onclick="selectType(this, 'custom_app')">
+            <div class="type-icon">⚙️</div>
+            <div class="type-name">Custom Web Platform</div>
+            <div class="type-desc">ລະບົບສະເພາະ, SaaS, Member Dashboard, ຖານຂໍ້ມູນ</div>
+          </div>
+        </div>
+        <input type="hidden" id="selectedWebsiteType" value="corporate">
+      </div>
+
+      <!-- SECTION 3: Pages & Structure -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">3</span>
+            <span>ໂຄງສ້າງໜ້າເວັບໄຊ (Website Pages & Structure)</span>
+          </div>
+          <span class="card-hint">ຕິກເລືອກໜ້າທີ່ຕ້ອງການ</span>
+        </div>
+
+        <div class="checkbox-grid" id="pagesList">
+          <label class="check-card"><input type="checkbox" value="Home" checked> Home (ໜ້າຫຼັກ)</label>
+          <label class="check-card"><input type="checkbox" value="About Us" checked> About Us (ກ່ຽວກັບເຮົາ)</label>
+          <label class="check-card"><input type="checkbox" value="Services" checked> Services (ບໍລິການ)</label>
+          <label class="check-card"><input type="checkbox" value="Portfolio" checked> Portfolio (ຜົນງານ)</label>
+          <label class="check-card"><input type="checkbox" value="Shop / Catalog"> Shop (ລາຍການສິນຄ້າ)</label>
+          <label class="check-card"><input type="checkbox" value="Shopping Cart"> Cart & Checkout (ກະຕ່າ)</label>
+          <label class="check-card"><input type="checkbox" value="News & Blog"> News & Blog (ບົດຄວາມ)</label>
+          <label class="check-card"><input type="checkbox" value="Contact Us" checked> Contact Us (ຕິດຕໍ່)</label>
+          <label class="check-card"><input type="checkbox" value="Booking"> Booking (ຈອງຫ້ອງ/ໂຕະ)</label>
+          <label class="check-card"><input type="checkbox" value="Food Menu"> Menu (ເມນູອາຫານ)</label>
+          <label class="check-card"><input type="checkbox" value="Pricing"> Pricing (ລາຄາ/ແພັກເກດ)</label>
+          <label class="check-card"><input type="checkbox" value="FAQ"> FAQ (ຄຳຖາມພົບເລື້ອຍ)</label>
+        </div>
+
+        <!-- Custom Page Adder -->
+        <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f1f5f9; display: flex; gap: 8px;">
+          <input type="text" id="customPageInput" placeholder="ເພີ່ມໜ້າສະເພາະອື່ນໆ ເຊັ່ນ: Our Team, Certificates..." style="flex: 1;">
+          <button type="button" class="btn btn-secondary" onclick="addCustomPage()">+ ເພີ່ມໜ້າ</button>
+        </div>
+        <div class="custom-pages-row" id="customPagesRow"></div>
+      </div>
+
+      <!-- SECTION 4: Design Style & Visual Mood -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">4</span>
+            <span>ສະໄຕລ໌ດີໄຊນ໌ ແລະ ໂທນສີ (Design Style & Visual Mood)</span>
+          </div>
+          <span class="card-hint">ເລືອກຮູບແບບທີ່ມັກ</span>
+        </div>
+
+        <!-- 4 Visual Style Cards (Pure Inline CSS Vectors) -->
+        <div class="style-grid" id="styleGrid">
+          <div class="style-card selected" onclick="selectStyle(this, 'minimal_luxury')">
+            <div class="style-preview-box" style="background: linear-gradient(135deg, #18181b 0%, #27272a 100%);">
+              <span style="color: #f4f4f5; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 300;">LUXURY MINIMAL</span>
+            </div>
+            <div class="style-card-body">
+              <h4>Minimalist Luxury</h4>
+              <p>ຮຽບງ່າຍ, ຫຼູຫຼາ, ເນັ້ນພື້ນທີ່ຂາວ, ຕົວອັກສອນປານີດ</p>
+            </div>
+          </div>
+
+          <div class="style-card" onclick="selectStyle(this, 'corporate_tech')">
+            <div class="style-preview-box" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);">
+              <span style="color: #93c5fd; font-size: 11px; letter-spacing: 1px; font-weight: 600;">MODERN TECH</span>
+            </div>
+            <div class="style-card-body">
+              <h4>Corporate & Tech</h4>
+              <p>ທັນສະໄໝ, ໜ້າເຊື່ອຖື, ໂຄງສ້າງຊັດເຈນ, ມືອາຊີບ</p>
+            </div>
+          </div>
+
+          <div class="style-card" onclick="selectStyle(this, 'ecommerce_modern')">
+            <div class="style-preview-box" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);">
+              <span style="color: #ffedd5; font-size: 11px; letter-spacing: 1px; font-weight: 600;">RETAIL STORE</span>
+            </div>
+            <div class="style-card-body">
+              <h4>Modern Retail</h4>
+              <p>ສວຍງາມ, ເຂົ້າເຖິງງ່າຍ, ໂຊສິນຄ້າເດັ່ນ, ກະຕຸ້ນການຊື້</p>
+            </div>
+          </div>
+
+          <div class="style-card" onclick="selectStyle(this, 'hospitality_warm')">
+            <div class="style-preview-box" style="background: linear-gradient(135deg, #78350f 0%, #b45309 100%);">
+              <span style="color: #fef3c7; font-size: 11px; letter-spacing: 1px; font-weight: 500;">HOSPITALITY</span>
+            </div>
+            <div class="style-card-body">
+              <h4>Warm Hospitality</h4>
+              <p>ອົບອຸ່ນ, ເຊື້ອເຊີນ, ໂທນທຳມະຊາດ, ຜ່ອນຄາຍ</p>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" id="selectedDesignStyle" value="minimal_luxury">
+
+        <!-- Color Palettes -->
+        <label style="margin-bottom: 8px;">ໂທນສີຫຼັກຂອງແບຣນ (Brand Color Palette):</label>
+        <div class="palette-grid" id="paletteGrid">
+          <div class="palette-card selected" onclick="selectPalette(this, 'Slate Tech (ເທົາເຂັ້ມ & ຟ້າ)')">
+            <span class="palette-name">Slate Tech</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#0F172A;"></span>
+              <span class="dot" style="background:#2563EB;"></span>
+              <span class="dot" style="background:#38BDF8;"></span>
+            </div>
+          </div>
+          <div class="palette-card" onclick="selectPalette(this, 'Mekong Emerald (ຂຽວ & ທອງ)')">
+            <span class="palette-name">Mekong Emerald</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#064E3B;"></span>
+              <span class="dot" style="background:#047857;"></span>
+              <span class="dot" style="background:#D97706;"></span>
+            </div>
+          </div>
+          <div class="palette-card" onclick="selectPalette(this, 'Royal Indigo (ມ່ວງຄາມ & ຟ້າ)')">
+            <span class="palette-name">Royal Indigo</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#1E1B4B;"></span>
+              <span class="dot" style="background:#4338CA;"></span>
+              <span class="dot" style="background:#0284C7;"></span>
+            </div>
+          </div>
+          <div class="palette-card" onclick="selectPalette(this, 'Bolaven Coffee (ນ້ຳຕານກາເຟ & ຄຣີມ)')">
+            <span class="palette-name">Bolaven Coffee</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#451A03;"></span>
+              <span class="dot" style="background:#78350F;"></span>
+              <span class="dot" style="background:#D97706;"></span>
+            </div>
+          </div>
+          <div class="palette-card" onclick="selectPalette(this, 'Pure Monochrome (ດຳ-ຂາວ)')">
+            <span class="palette-name">Pure Monochrome</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#18181B;"></span>
+              <span class="dot" style="background:#71717A;"></span>
+              <span class="dot" style="background:#FFFFFF;"></span>
+            </div>
+          </div>
+          <div class="palette-card" onclick="selectPalette(this, 'Lao Crimson (ແດງສະຫງ່າ & ທອງ)')">
+            <span class="palette-name">Lao Crimson</span>
+            <div class="palette-dots">
+              <span class="dot" style="background:#881337;"></span>
+              <span class="dot" style="background:#BE123C;"></span>
+              <span class="dot" style="background:#B45309;"></span>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" id="selectedColorPalette" value="Slate Tech (ເທົາເຂັ້ມ & ຟ້າ)">
+
+        <div class="grid-2" style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f1f5f9;">
+          <div class="form-group">
+            <label>ຮູບແບບຟອນ (Typography)</label>
+            <select id="typographyPreference">
+              <option value="Modern Sans (ສະອາດ, ທັນສະໄໝ)">Modern Sans (ສະອາດ, ທັນສະໄໝ)</option>
+              <option value="Editorial Serif (ຫຼູຫຼາ, ຄລາສສິກ)">Editorial Serif (ຫຼູຫຼາ, ຄລາສສິກ)</option>
+              <option value="Clean Minimal (ຮຽບງ່າຍ, ສະບາຍຕາ)">Clean Minimal (ຮຽບງ່າຍ, ສະບາຍຕາ)</option>
+              <option value="Bold Impact (ໂດດເດັ່ນ, ໜັກແໜ້ນ)">Bold Impact (ໂດດເດັ່ນ, ໜັກແໜ້ນ)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>ເວັບໄຊຕົວຢ່າງທີ່ມັກ (Reference URLs)</label>
+            <input type="text" id="referenceUrls" placeholder="ຕົວຢ່າງ: https://apple.com, https://airbnb.com">
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Features & Integrations -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">5</span>
+            <span>ຟັງຊັນ ແລະ ລະບົບທີ່ຕ້ອງການ (Features & Integrations)</span>
+          </div>
+          <span class="card-hint">ເລືອກລະບົບທີ່ຕ້ອງການໃຊ້</span>
+        </div>
+
+        <div class="checkbox-grid" id="featuresList">
+          <label class="check-card"><input type="checkbox" value="Multilingual (ຫຼາຍພາສາ ລາວ/ອັງກິດ/ຈີນ)" checked> ຫຼາຍພາສາ (Lao/Eng/CN)</label>
+          <label class="check-card"><input type="checkbox" value="BCEL One QR Payment"> BCEL One QR Payment</label>
+          <label class="check-card"><input type="checkbox" value="WhatsApp / LINE Chat" checked> WhatsApp / LINE Chat</label>
+          <label class="check-card"><input type="checkbox" value="Google Maps Embed" checked> Google Maps ແຜນທີ່</label>
+          <label class="check-card"><input type="checkbox" value="SEO & Social Meta" checked> SEO & Social Meta</label>
+          <label class="check-card"><input type="checkbox" value="Lead Inquiry Form" checked> ຟອມຕິດຕໍ່ສອບຖາມ</label>
+          <label class="check-card"><input type="checkbox" value="Admin CMS Dashboard"> Admin CMS ຈັດການເນື້ອຫາ</label>
+          <label class="check-card"><input type="checkbox" value="Booking & Reservation"> ລະບົບປະຕິທິນຈອງວັນ</label>
+          <label class="check-card"><input type="checkbox" value="User Account & Login"> ລະບົບສະມາຊິກ/Login</label>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Assets Readiness -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span class="step-badge">6</span>
+            <span>ຄວາມພ້ອມດ້ານຂໍ້ມູນ ແລະ ສື່ (Content Readiness)</span>
+          </div>
+          <span class="card-hint">ສະພາບຄວາມພ້ອມຂອງເນື້ອຫາ</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label>ໂລໂກ້ແບຣນ (Logo Status)</label>
+            <select id="logoStatus">
+              <option value="ready">ມີໄຟລ໌ຄົມຊັດແລ້ວ (PNG / SVG / AI)</option>
+              <option value="needs_refresh">ມີແລ້ວແຕ່ຕ້ອງການປັບປຸງຄືນໃໝ່</option>
+              <option value="needs_new">ຍັງບໍ່ມີ (ຕ້ອງການໃຫ້ອອກແບບໃຫ້)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>ບົດຄວາມ ແລະ ຂໍ້ຄວາມ (Copywriting)</label>
+            <select id="copywritingStatus">
+              <option value="ready">ມີເນື້ອຫາຄົບຖ້ວນພ້ອມລົງເວັບ</option>
+              <option value="partial" selected>ມີບາງສ່ວນ (ຕ້ອງການໃຫ້ຊ່ວຍຮຽບຮຽງ)</option>
+              <option value="needs_agency">ຕ້ອງການໃຫ້ທີມງານຂຽນໃຫ້ທັງໝົດ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>ຮູບພາບສິນຄ້າ & ສະຖານທີ່ (Photography)</label>
+            <select id="photographyStatus">
+              <option value="ready_hd" selected>ມີຮູບຖ່າຍຄຸນນະພາບສູງພ້ອມໃຊ້ງານ</option>
+              <option value="smartphone">ມີຮູບຖ່າຍຈາກມືຖື (ຕ້ອງການແຕ່ງເພີ່ມ)</option>
+              <option value="needs_photo">ຕ້ອງການບໍລິການຖ່າຍຮູບມືອາຊີບ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Domain & Hosting</label>
+            <select id="domainHostingStatus">
+              <option value="need_agency" selected>ຕ້ອງການໃຫ້ທີມງານແນະນຳ ແລະ ຈັດຫາໃຫ້</option>
+              <option value="already_have">ມີຊື່ໂດເມນ ແລະ ເຊີເວີແລ້ວ</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>ຊື່ໂດເມນທີ່ຢາກໄດ້ (Desired Domain Name)</label>
+          <input type="text" id="domainDesired" placeholder="ຕົວຢ່າງ: lanexangtea.la, mycompany.com">
+        </div>
+
+        <div class="form-group" style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #f1f5f9;">
+          <label>ໝາຍເຫດ ຫຼື ຄວາມຕ້ອງການເພີ່ມເຕີມ</label>
+          <textarea id="additionalNotes" rows="2" placeholder="ລະບຸລາຍລະອຽດອື່ນໆ ທີ່ຕ້ອງການໃຫ້ທີມງານຊາບເປັນພິເສດ..."></textarea>
+        </div>
+      </div>
+
+      <!-- ACTION BAR -->
+      <div class="action-bar no-print">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <!-- ปุ่ม LINE หลัก (ส่งเข้ากลุ่มทีม) -->
+          <button type="button" class="btn" style="background:#06C755; color:white; font-size:13px; padding:10px 18px; border-radius:10px; box-shadow:0 2px 4px rgba(6,199,85,0.3);" onclick="sendToLineTeam(event)">
+            <span>🚀 ສົ່ງບຣີຟເຂົ້າທີມ (LINE)</span>
+          </button>
+          <!-- Direct WhatsApp Button -->
+          <button type="submit" class="btn btn-whatsapp">
+            <span>💬 ສົ່ງຂໍ້ມູນເຂົ້າ WhatsApp</span>
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-secondary btn-sm" onclick="resetForm()">
+          🔄 ລ້າງຟອມ
+        </button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- ==========================================================
+       EMBEDDED JAVASCRIPT - ພາສາເວັບພື້ນຖານ JAVASCRIPT ໃນໄຟລ໌ດຽວ
+       ========================================================== -->
+  <script>
+    // Agency WhatsApp Number
+    const AGENCY_WHATSAPP = '8562055575537';
+
+    // State
+    let customPages = [];
+
+    // Website Types configuration
+    const TYPE_CONFIGS = {
+      corporate: {
+        name: 'Corporate & Business',
+        pages: ['Home', 'About Us', 'Services', 'Portfolio', 'Contact Us'],
+        features: ['Multilingual (ຫຼາຍພາສາ ລາວ/ອັງກິດ/ຈີນ)', 'WhatsApp / LINE Chat', 'Google Maps Embed', 'SEO & Social Meta', 'Lead Inquiry Form']
+      },
+      ecommerce: {
+        name: 'E-Commerce Store',
+        pages: ['Home', 'Shop / Catalog', 'Shopping Cart', 'Contact Us'],
+        features: ['BCEL One QR Payment', 'Multilingual (ຫຼາຍພາສາ ລາວ/ອັງກິດ/ຈີນ)', 'SEO & Social Meta', 'Admin CMS Dashboard']
+      },
+      hospitality: {
+        name: 'Hospitality & Resort',
+        pages: ['Home', 'About Us', 'Booking', 'Contact Us'],
+        features: ['Multilingual (ຫຼາຍພາສາ ລາວ/ອັງກິດ/ຈີນ)', 'Booking & Reservation', 'WhatsApp / LINE Chat', 'Google Maps Embed']
+      },
+      restaurant: {
+        name: 'Restaurant & Cafe',
+        pages: ['Home', 'Food Menu', 'Booking', 'Contact Us'],
+        features: ['WhatsApp / LINE Chat', 'Google Maps Embed', 'Booking & Reservation']
+      },
+      portfolio: {
+        name: 'Portfolio & Creative',
+        pages: ['Home', 'About Us', 'Portfolio', 'Contact Us'],
+        features: ['SEO & Social Meta', 'Lead Inquiry Form', 'WhatsApp / LINE Chat']
+      },
+      education: {
+        name: 'Education & Academy',
+        pages: ['Home', 'About Us', 'Services', 'Contact Us'],
+        features: ['Multilingual (ຫຼາຍພາສາ ລາວ/ອັງກິດ/ຈີນ)', 'Lead Inquiry Form', 'SEO & Social Meta']
+      },
+      real_estate: {
+        name: 'Real Estate & Property',
+        pages: ['Home', 'About Us', 'Services', 'Contact Us'],
+        features: ['WhatsApp / LINE Chat', 'Google Maps Embed', 'SEO & Social Meta']
+      },
+      custom_app: {
+        name: 'Custom Web Platform',
+        pages: ['Home', 'Services', 'Pricing', 'Contact Us'],
+        features: ['User Account & Login', 'Admin CMS Dashboard', 'BCEL One QR Payment']
+      }
+    };
+
+    // On Load
+    document.addEventListener('DOMContentLoaded', () => {});
+
+    // Select Type
+    function selectType(card, typeKey) {
+      document.querySelectorAll('#typeGrid .type-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      document.getElementById('selectedWebsiteType').value = typeKey;
+
+      const cfg = TYPE_CONFIGS[typeKey];
+      if (cfg) {
+        // Auto check recommended pages
+        document.querySelectorAll('#pagesList input[type="checkbox"]').forEach(cb => {
+          cb.checked = cfg.pages.includes(cb.value);
+        });
+        // Auto check recommended features
+        document.querySelectorAll('#featuresList input[type="checkbox"]').forEach(cb => {
+          cb.checked = cfg.features.includes(cb.value);
+        });
+      }
+    }
+
+    // Select Style
+    function selectStyle(card, styleKey) {
+      document.querySelectorAll('#styleGrid .style-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      document.getElementById('selectedDesignStyle').value = styleKey;
+    }
+
+    // Select Palette
+    function selectPalette(card, paletteName) {
+      document.querySelectorAll('#paletteGrid .palette-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      document.getElementById('selectedColorPalette').value = paletteName;
+    }
+
+    // Add Custom Page
+    function addCustomPage() {
+      const input = document.getElementById('customPageInput');
+      const val = input.value.trim();
+      if (val && !customPages.includes(val)) {
+        customPages.push(val);
+        input.value = '';
+        renderCustomPages();
+      }
+    }
+
+    // Render Custom Pages
+    function renderCustomPages() {
+      const row = document.getElementById('customPagesRow');
+      row.innerHTML = customPages.map((p, idx) => `
+        <span class="page-chip">
+          <span>${escapeHtml(p)}</span>
+          <span class="page-chip-remove" onclick="removeCustomPage(${idx})">&times;</span>
+        </span>
+      `).join('');
+    }
+
+    function removeCustomPage(idx) {
+      customPages.splice(idx, 1);
+      renderCustomPages();
+    }
+
+    // Get selected pages & features
+    function getSelectedPages() {
+      const list = [];
+      document.querySelectorAll('#pagesList input[type="checkbox"]:checked').forEach(cb => list.push(cb.value));
+      return [...list, ...customPages];
+    }
+
+    function getSelectedFeatures() {
+      const list = [];
+      document.querySelectorAll('#featuresList input[type="checkbox"]:checked').forEach(cb => list.push(cb.value));
+      return list;
+    }
+
+    // Collect all data
+    function collectBriefData() {
+      return {
+        id: 'WB-' + Date.now().toString(36).toUpperCase(),
+        createdAt: new Date().toISOString(),
+        companyName: document.getElementById('companyName').value.trim(),
+        clientName: document.getElementById('clientName').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        whatsappOrLine: document.getElementById('whatsappOrLine').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        businessCategory: document.getElementById('businessCategory').value.trim(),
+        businessDescription: document.getElementById('businessDescription').value.trim(),
+        targetAudience: document.getElementById('targetAudience').value.trim(),
+        websiteType: document.getElementById('selectedWebsiteType').value,
+        selectedPages: getSelectedPages(),
+        designStyle: document.getElementById('selectedDesignStyle').value,
+        colorPalette: document.getElementById('selectedColorPalette').value,
+        typography: document.getElementById('typographyPreference').value,
+        referenceUrls: document.getElementById('referenceUrls').value.trim(),
+        features: getSelectedFeatures(),
+        logoStatus: document.getElementById('logoStatus').value,
+        copywritingStatus: document.getElementById('copywritingStatus').value,
+        photographyStatus: document.getElementById('photographyStatus').value,
+        domainHostingStatus: document.getElementById('domainHostingStatus').value,
+        domainDesired: document.getElementById('domainDesired').value.trim(),
+        additionalNotes: document.getElementById('additionalNotes').value.trim(),
+      };
+    }
+
+    // WhatsApp Form Submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const data = collectBriefData();
+
+      const pagesListStr = data.selectedPages.map(p => `  • ${p}`).join('\n') || '  (ບໍ່ໄດ້ລະບຸ)';
+      const featuresListStr = data.features.map(f => `  • ${f}`).join('\n') || '  (ບໍ່ໄດ້ລະບຸ)';
+
+      const msg = `
+*📋 ໃບສະຫຼຸບຄວາມຕ້ອງການສ້າງເວັບໄຊ (Web Discovery Brief)*
+*ລະຫັດອ້າງອີງ:* ${data.id}
+---------------------------------------
+🏢 *ຊື່ບໍລິສັດ/ແບຣນ:* ${data.companyName}
+👤 *ຊື່ຜູ້ຕິດຕໍ່:* ${data.clientName}
+📞 *ເບີໂທລະສັບ:* ${data.phone}
+💬 *WhatsApp/Line:* ${data.whatsappOrLine || 'ບໍ່ໄດ້ລະບຸ'}
+📧 *ອີເມວ:* ${data.email || 'ບໍ່ໄດ້ລະບຸ'}
+📂 *ປະເພດທຸລະກິດ:* ${data.businessCategory || 'ທົ່ວໄປ'}
+${data.businessDescription ? `📝 *ລາຍລະອຽດ:* ${data.businessDescription}\n` : ''}
+🌐 *ປະເພດເວັບໄຊ:* ${data.websiteType}
+🎨 *ສະໄຕລ໌ດີໄຊນ໌:* ${data.designStyle}
+🎨 *ໂທນສີ:* ${data.colorPalette}
+${data.referenceUrls ? `🔗 *ລິ້ງຕົວຢ່າງ:* ${data.referenceUrls}\n` : ''}
+📄 *ໜ້າເວັບ (${data.selectedPages.length} ໜ້າ):*
+${pagesListStr}
+
+⚡ *ລະບົບ & ຟັງຊັນ:*
+${featuresListStr}
+${data.additionalNotes ? `\n📝 *ໝາຍເຫດ:* ${data.additionalNotes}` : ''}
+---------------------------------------
+_ສົ່ງຈາກລະບົບ WebBrief.la_
+      `.trim();
+
+      const url = `https://wa.me/${AGENCY_WHATSAPP}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+
+    // Load Example Data
+    function loadExampleData() {
+      document.getElementById('companyName').value = 'Lanexang Natural Herbal Tea';
+      document.getElementById('clientName').value = 'ທ້າວ ສົມສັກ ວົງສາ (ຜູ້ຈັດການ)';
+      document.getElementById('phone').value = '020 5551 2345';
+      document.getElementById('whatsappOrLine').value = '+856 20 5551 2345';
+      document.getElementById('email').value = 'contact@lanexangtea.la';
+      document.getElementById('businessCategory').value = 'ສິນຄ້າກະສິກຳແປຮູບ & ຊາສະໝຸນໄພອິນຊີ';
+      document.getElementById('businessDescription').value = 'ຜະລິດ ແລະ ຈຳໜ່າຍຊາສະໝຸນໄພອິນຊີຈາກທີ່ຮາບສູງບໍລະເວນ ສົ່ງອອກທັງພາຍໃນ ແລະ ຕ່າງປະເທດ ຕ້ອງການເວັບໄຊໂຊສິນຄ້າ ແລະ ສັ່ງຊື້ອອນລາຍ';
+      document.getElementById('targetAudience').value = 'ລູກຄ້າຮັກສຸຂະພາບ, ນັກທ່ອງທ່ຽວ, ຕົວແທນຈຳໜ່າຍສິນຄ້າ OTOP';
+      document.getElementById('referenceUrls').value = 'https://twgtea.com, https://monotea.com';
+      document.getElementById('domainDesired').value = 'lanexangtea.la';
+      document.getElementById('additionalNotes').value = 'ຕ້ອງການຮອງຮັບການຊຳລະດ້ວຍ BCEL One QR Code ແລະ ຮອງຮັບພາສາລາວ-ອັງກິດ-ຈີນ';
+
+      const ecommerceCard = Array.from(document.querySelectorAll('#typeGrid .type-card'))[1];
+      if (ecommerceCard) selectType(ecommerceCard, 'ecommerce');
+
+      customPages = ['Story & Heritage', 'Organic Certificate'];
+      renderCustomPages();
+    }
+
+    // ==========================================
+    // 🚀 ส่งบรีฟเข้ากลุ่ม LINE ของทีม
+    // ==========================================
+    const LINE_WORKER_URL = "https://line-bridge.pheuangvichithkeokisith.workers.dev";
+    const LINE_GROUP_ID = "C6b564ec08c707f4bd9b313f08308dcab";
+
+    async function sendToLineTeam(event) {
+      const data = collectBriefData();
+
+      // ตรวจสอบความถูกต้องเบื้องต้น
+      if (!data.companyName || !data.phone) {
+        alert("ກະລຸນາໃສ່ ຊື່ບໍລິສັດ/ແບຣນ ແລະ ເບີໂທລະສັບ ກ່ອນສົ່ງບຣີຟ!");
+        return;
+      }
+      
+      // จัดรูปแบบข้อความให้กระชับ (LINE จำกัด 5000 ตัวอักษร)
+      const pagesText = data.selectedPages.slice(0, 8).map(p => `• ${p}`).join('\n');
+      const pagesMore = data.selectedPages.length > 8 ? `\n...และอีก ${data.selectedPages.length - 8} หน้า` : '';
+      
+      const featuresText = data.features.slice(0, 5).map(f => `• ${f}`).join('\n');
+      const featuresMore = data.features.length > 5 ? `\n...และอีก ${data.features.length - 5} ฟังก์ชัน` : '';
+      
+      // แปลงชื่อประเภทเว็บเป็นภาษาไทย/ลาว
+      const typeNames = {
+        corporate: 'Corporate & Business',
+        ecommerce: 'E-Commerce Store',
+        hospitality: 'Hospitality & Resort',
+        restaurant: 'Restaurant & Cafe',
+        portfolio: 'Portfolio & Creative',
+        education: 'Education & Academy',
+        real_estate: 'Real Estate & Property',
+        custom_app: 'Custom Web Platform'
+      };
+      
+      const msg = 
+`🚨 *บรีฟใหม่เข้าระบบ!*
+🎫 รหัส: ${data.id}
+━━━━━━━━━━━━━━━
+
+👥 *ข้อมูลลูกค้า*
+🏢 บริษัท: ${data.companyName}
+👤 ติดต่อ: ${data.clientName}
+📞 โทร: ${data.phone}
+💬 WA/Line: ${data.whatsappOrLine || '-'}
+📧 อีเมล: ${data.email || '-'}
+
+📦 *รายละเอียดงาน*
+🌐 ประเภทเว็บ: ${typeNames[data.websiteType] || data.websiteType}
+🎨 สไตล์: ${data.designStyle}
+🎨 โทนสี: ${data.colorPalette}
+
+📄 *หน้าเว็บ (${data.selectedPages.length} หน้า)*
+${pagesText}${pagesMore}
+
+⚡ *ฟังก์ชันที่ต้องการ*
+${featuresText}${featuresMore}
+
+${data.businessDescription ? `📝 *รายละเอียดธุรกิจ:*\n${data.businessDescription.substring(0, 200)}...\n\n` : ''}${data.additionalNotes ? `💬 *หมายเหตุ:*\n${data.additionalNotes}\n\n` : ''}━━━━━━━━━━━━━━━
+📌 รีบติดต่อลูกค้าด่วน!`;
+
+      // ปุ่มเปลี่ยนเป็น "กำลังส่ง..."
+      const btn = event ? (event.target.closest('button') || event.target) : document.querySelector('button[onclick*="sendToLineTeam"]');
+      const originalText = btn ? btn.innerHTML : '';
+      if (btn) {
+        btn.innerHTML = '⏳ กำลังส่ง...';
+        btn.disabled = true;
+      }
+
+      try {
+        const response = await fetch(LINE_WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            groupId: LINE_GROUP_ID,
+            message: msg
+          })
+        });
+
+        if (response.ok) {
+          alert("✅ ส่งบรีฟเข้ากลุ่ม LINE ทีมเรียบร้อยแล้ว!\nทีมงานจะติดต่อกลับเร็วๆ นี้ครับ");
+        } else {
+          alert("❌ ส่งไม่สำเร็จ กรุณาลองใหม่");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("❌ เกิดข้อผิดพลาด: " + error.message);
+      } finally {
+        if (btn) {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }
+      }
+    }
+
+    // Reset Form
+    function resetForm() {
+      if (confirm('ທ່ານຕ້ອງການລ້າງຟອມ ແລະ ເລີ່ມຕົ້ນໃໝ່ແທ້ບໍ່?')) {
+        document.getElementById('intakeForm').reset();
+        customPages = [];
+        renderCustomPages();
+        const firstType = document.querySelector('#typeGrid .type-card');
+        if (firstType) selectType(firstType, 'corporate');
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+    }
+  </script>
+</body>
+</html>
